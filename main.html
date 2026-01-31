@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>B8 Game - Trung Tâm Game Giải Trí</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">🎮</div>
+                <h1>B8 Game</h1>
+            </div>
+            <div class="auth-buttons">
+                <a href="./client/pages/login-page/login.html" class="btn btn-login">Đăng nhập</a>
+                <a href="./client/pages/register-page/register.html" class="btn btn-register">Đăng ký</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="welcome-section">
+            <h2>Chào mừng đến với B8 Game!</h2>
+            <p>Trung tâm game giải trí hàng đầu - Chơi game miễn phí, không giới hạn!</p>
+        </div>
+
+        <div class="games-grid">
+            <!-- Snake Game -->
+            <div class="game-card" onclick="window.location.href='./client/pages/snake-game-page/snake-game.html'">
+                <div class="game-icon">🐍</div>
+                <div class="game-info">
+                    <h3 class="game-title">Snake Game</h3>
+                    <p class="game-description">
+                        Điều khiển con rắn ăn táo, tránh va chạm và đạt điểm cao nhất.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">Điều khiển dễ</span>
+                        <span class="feature-tag">Tính điểm</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Hiệu ứng</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+
+            <!-- Flappy Bird -->
+            <div class="game-card" onclick="window.location.href='./client/pages/flappy-bird-page/flappy-bird.html'">
+                <div class="game-icon">🐦</div>
+                <div class="game-info">
+                    <h3 class="game-title">Flappy Bird</h3>
+                    <p class="game-description">
+                        Bay qua các chướng ngại vật! Nhấn để bay lên, thả để rơi xuống.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">One-tap</span>
+                        <span class="feature-tag">Thử thách</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Vật lý thực</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+
+            <!-- Memory Card -->
+            <div class="game-card" onclick="window.location.href='./client/pages/memory-card-page/memory-card.html'">
+                <div class="game-icon">🃏</div>
+                <div class="game-info">
+                    <h3 class="game-title">Memory Card</h3>
+                    <p class="game-description">
+                        Tìm các cặp bài giống nhau, rèn luyện trí nhớ và tốc độ phản xạ.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">Trí nhớ</span>
+                        <span class="feature-tag">Tính giờ</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Nhiều cấp độ</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+
+            <!-- Tic Tac Toe -->
+            <div class="game-card" onclick="window.location.href='./client/pages/tic-tac-toe-page/tic-tac-toe.html'">
+                <div class="game-icon">⭕</div>
+                <div class="game-info">
+                    <h3 class="game-title">Tic Tac Toe</h3>
+                    <p class="game-description">
+                        Cờ caro 3x3. Chơi với bạn bè hoặc thử sức với AI thông minh.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">2 người chơi</span>
+                        <span class="feature-tag">Chơi với AI</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Giao diện đẹp</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+
+            <!-- Puzzle Game -->
+            <div class="game-card" onclick="window.location.href='./client/pages/puzzle-game-page/puzzle-game.html'">
+                <div class="game-icon">🧩</div>
+                <div class="game-info">
+                    <h3 class="game-title">Puzzle Game</h3>
+                    <p class="game-description">
+                        Trò chơi ghép hình thử thách. Sắp xếp các mảnh ghép để tạo thành hình hoàn chỉnh.
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">Tư duy</span>
+                        <span class="feature-tag">Đếm nước đi</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Nhiều mức độ</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+
+            <!-- Space Shooter -->
+            <div class="game-card" onclick="window.location.href='./client/pages/space-shooter-page/space-shooter.html'">
+                <div class="game-icon">🚀</div>
+                <div class="game-info">
+                    <h3 class="game-title">Space Shooter</h3>
+                    <p class="game-description">
+                        Bắn tàu vũ trụ hấp dẫn! Tiêu diệt kẻ thù, thu thập điểm và sống sót càng lâu càng tốt!
+                    </p>
+                    <div class="game-features">
+                        <span class="feature-tag">Hành động</span>
+                        <span class="feature-tag">Điểm cao</span>
+                        <span class="feature-tag">Âm thanh</span>
+                        <span class="feature-tag">Hiệu ứng nổ</span>
+                    </div>
+                    <button class="play-btn">Chơi ngay →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>B8 Game © 2026 - Trẻ không chơi già đổ đốn!</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">
+            Made with stress and back pain.
+        </p>
+    </footer>
+</body>
+</html>
