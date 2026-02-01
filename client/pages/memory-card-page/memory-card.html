@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🃏 Memory Card - Game Hub</title>
+    <link rel="stylesheet" href="/game-styles.css">
+    <link rel="stylesheet" href="/client/pages/memory-card-page/memory-card.css">
+</head>
+<body>
+    <button class="sound-toggle" id="soundToggle">🔊</button>
+
+    <div class="game-container">
+        <div class="header">
+            <a href="/main.html" class="back-link">← Quay về</a>
+            <h1>🃏 MEMORY CARD</h1>
+        </div>
+
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-level="easy">DỄ (8 cặp)</button>
+            <button class="difficulty-btn" data-level="medium">TRUNG BÌNH (12 cặp)</button>
+            <button class="difficulty-btn" data-level="hard">KHÓ (18 cặp)</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">THỜI GIAN</div>
+                <div class="stat-value" id="time">0:00</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">NƯỚC ĐI</div>
+                <div class="stat-value" id="moves">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">TỐI ƯU</div>
+                <div class="stat-value" id="bestMoves">-</div>
+            </div>
+        </div>
+
+        <div class="game-board easy" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn">BẮT ĐẦU</button>
+            <button class="btn" id="resetProgressBtn">XÓA TIẾN ĐỘ</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 HƯỚNG DẪN CHƠI</h3>
+            <ul>
+                <li>Lật 2 thẻ bài mỗi lượt</li>
+                <li>Tìm các cặp thẻ giống nhau</li>
+                <li>Ghi nhớ vị trí các thẻ đã lật</li>
+                <li>Hoàn thành nhanh nhất có thể</li>
+                <li>Số nước đi ít = điểm cao hơn</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="winModal">
+        <div class="modal-content">
+            <h2>🎉 CHIẾN THẮNG!</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">
+                Thời gian: <strong id="finalTime">0:00</strong><br>
+                Số nước đi: <strong id="finalMoves">0</strong>
+            </p>
+            <p id="newRecordText" style="display: none; color: #00ff00; font-size: 1.2em; margin: 15px 0;">
+                🏆 KỶ LỤC MỚI! 🏆
+            </p>
+            <button class="btn btn-primary" onclick="restartGame()">CHƠI LẠI</button>
+        </div>
+    </div>
+
+    <script src="client/assets/js/memory-card.js"></script>
+</body>
+</html>

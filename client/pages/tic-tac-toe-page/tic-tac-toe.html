@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⭕ Tic Tac Toe - Game Hub</title>
+    <link rel="stylesheet" href="/game-styles.css">
+    <link rel="stylesheet" href="/client/pages/tic-tac-toe-page/tic-tac-toe.css">
+</head>
+<body>
+    <button class="sound-toggle" id="soundToggle">🔊</button>
+
+    <div class="game-container">
+        <div class="header">
+            <a href="/main.html" class="back-link">← Quay về</a>
+            <h1>⭕ TIC TAC TOE</h1>
+        </div>
+
+        <div class="mode-selector">
+            <button class="mode-btn active" data-mode="ai">🤖 Chơi với AI</button>
+            <button class="mode-btn" data-mode="player">👥 2 Người chơi</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">X THẮNG</div>
+                <div class="stat-value" id="xWins">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">HÒA</div>
+                <div class="stat-value" id="draws">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">O THẮNG</div>
+                <div class="stat-value" id="oWins">0</div>
+            </div>
+        </div>
+
+        <div class="game-status" id="gameStatus">Lượt của X</div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="newGameBtn">CHƠI MỚI</button>
+            <button class="btn" id="resetStatsBtn">XÓA THỐNG KÊ</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 HƯỚNG DẪN CHƠI</h3>
+            <ul>
+                <li><strong>Mục tiêu:</strong> Xếp 3 ô liên tiếp (ngang/dọc/chéo)</li>
+                <li><strong>Chế độ AI:</strong> Bạn là X, AI là O (AI rất thông minh!)</li>
+                <li><strong>2 Người chơi:</strong> Luân phiên X và O</li>
+                <li>Click vào ô trống để đánh</li>
+                <li>Người chiến thắng sẽ được highlight</li>
+            </ul>
+        </div>
+    </div>
+    <script src="client/assets/js/tic-tac-toe.js"></script>
+</body>
+</html>

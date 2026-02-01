@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
     const currentUser = sessionStorage.getItem('currentUser');
     if (currentUser) {
-        window.location.href = './main.html';
+        window.location.href = '/main.html';
     }
 });
 
@@ -13,6 +13,8 @@ function handleLogin(event) {
     const remember = document.getElementById('remember').checked;
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
+    users.push(formData);
+    localStorage.setItem('users', JSON.stringify(users));
 
     const user = users.find(u =>
         (u.email === emailOrUsername || u.username === emailOrUsername) &&
@@ -36,7 +38,7 @@ function handleLogin(event) {
 
         alert(`Đăng nhập thành công! 🎉\nChào mừng ${user.fullname}!`);
 
-        window.location.href = './main.html';
+        window.location.href = '/main.html';
     } else {
         alert('❌ Đăng nhập thất bại!\n\nEmail/Username hoặc mật khẩu không đúng.\nVui lòng thử lại.');
 
@@ -44,19 +46,6 @@ function handleLogin(event) {
         document.getElementById('password').focus();
     }
 }
-
-function socialLogin(platform) {
-    alert(`Đăng nhập bằng ${platform}!\n\n(Chức năng đang phát triển - sẽ có trong phiên bản tiếp theo)`);
-}
-
-window.addEventListener('DOMContentLoaded', function () {
-    const rememberedUser = localStorage.getItem('rememberedUser');
-    if (rememberedUser) {
-        const user = JSON.parse(rememberedUser);
-        document.getElementById('email').value = user.username;
-        document.getElementById('remember').checked = true;
-    }
-});
 
 const inputs = document.querySelectorAll('input');
 inputs.forEach(input => {

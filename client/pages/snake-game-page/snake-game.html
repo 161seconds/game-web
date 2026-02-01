@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Snake Game - Game Hub</title>
+    <link rel="stylesheet" href="/game-styles.css">
+    <link rel="stylesheet" href="/client/pages/snake-game-page/snake-game.css">
+</head>
+<body>
+    <button class="sound-toggle" id="soundToggle">🔊</button>
+
+    <div class="game-container">
+        <div class="header">
+            <a href="/main.html" class="back-link">← Quay về trang chủ</a>
+            <h1>🐍 SNAKE GAME</h1>
+            <p class="subtitle">Săn mồi và trở thành rắn dài nhất!</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Điểm số</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Kỷ lục</div>
+                <div class="stat-value" id="highScore">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Độ dài</div>
+                <div class="stat-value" id="length">1</div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn">Bắt đầu chơi</button>
+            <button class="btn" id="pauseBtn" style="display: none;">Tạm dừng</button>
+            <button class="btn" id="resetBtn">Reset kỷ lục</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 Hướng dẫn chơi</h3>
+            <ul>
+                <li>Sử dụng phím <strong>↑ ↓ ← →</strong> hoặc <strong>W A S D</strong> để điều khiển rắn</li>
+                <li>Ăn táo đỏ 🍎 để tăng điểm (+10) và độ dài</li>
+                <li>Tránh đâm vào tường và thân của chính mình</li>
+                <li>Nhấn <strong>Space</strong> để tạm dừng</li>
+                <li>Tốc độ tăng dần khi ăn nhiều táo hơn</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>💀 GAME OVER!</h2>
+            <p>Điểm của bạn: <strong id="finalScore">0</strong></p>
+            <p>Độ dài: <strong id="finalLength">0</strong></p>
+            <p id="newRecordText" style="display: none;">🏆 KỶ LỤC MỚI! 🏆</p>
+            
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="playAgainBtn">Chơi lại</button>
+                <button class="btn" id="quitBtn">Dừng lại</button>
+            </div>
+        </div>
+    </div>
+    <script src="client/assets/js/snake-game.js"></script>
+</body>
+</html>

@@ -56,7 +56,6 @@ function handleRegister(event) {
 
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
-    const terms = document.getElementById('terms').checked;
 
     if (password !== confirmPassword) {
         alert('Mật khẩu xác nhận không khớp!');
@@ -76,10 +75,6 @@ function handleRegister(event) {
     alert('Đăng ký thành công! \nChào mừng bạn đến với Game Hub!');
 
     window.location.href = './client/pages/login-page/login.html';
-}
-
-function socialRegister(platform) {
-    alert(`Đăng ký bằng ${platform}! (Chức năng đang phát triển)`);
 }
 
 const inputs = document.querySelectorAll('input, select');

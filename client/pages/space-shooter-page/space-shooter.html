@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Space Shooter - Game Hub</title>
+    <link rel="stylesheet" href="/game-styles.css">
+    <link rel="stylesheet" href="/client/pages/space-shooter-page/space-shooter.css">
+</head>
+<body>
+    <button class="sound-toggle" id="soundToggle">🔊</button>
+
+    <div class="game-container">
+        <div class="header">
+            <a href="/main.html" class="back-link">← Quay về</a>
+            <h1>🚀 SPACE SHOOTER</h1>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">SCORE</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">LEVEL</div>
+                <div class="stat-value" id="level">1</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">HIGH SCORE</div>
+                <div class="stat-value" id="highScore">0</div>
+            </div>
+        </div>
+
+        <div class="health-bar">
+            <div class="health-fill" id="healthFill" style="width: 100%;"></div>
+        </div>
+
+        <canvas id="gameCanvas" width="600" height="600"></canvas>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn">START GAME</button>
+            <button class="btn" id="pauseBtn" style="display: none;">PAUSE</button>
+            <button class="btn" id="resetBtn">RESET SCORE</button>
+        </div>
+
+        <div class="instructions">
+            <h3>📖 HƯỚNG DẪN CHƠI</h3>
+            <ul>
+                <li>Sử dụng <strong>← →</strong> hoặc <strong>A D</strong> để di chuyển</li>
+                <li>Nhấn <strong>SPACE</strong> để bắn</li>
+                <li>Tiêu diệt kẻ thù để nhận điểm</li>
+                <li>Tránh đạn của địch</li>
+                <li>Level cao hơn = khó hơn!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>GAME OVER!</h2>
+            <p style="font-size: 1.3em; margin: 20px 0;">
+                Score: <strong id="finalScore">0</strong><br>
+                Level: <strong id="finalLevel">1</strong>
+            </p>
+            <p id="newRecordText" style="display: none; color: #00ff00; font-size: 1.2em;">
+                🏆 NEW RECORD! 🏆
+            </p>
+            <button class="btn btn-primary" onclick="restartGame()">PLAY AGAIN</button>
+        </div>
+    </div>
+    <script src="client/assets/js/space-shooter.js"></script>
+</body>
+</html>

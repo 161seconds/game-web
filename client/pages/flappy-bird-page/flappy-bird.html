@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐦 Flappy Bird - Game Hub</title>
+    <link rel="stylesheet" href="/game-styles.css">
+    <link rel="stylesheet" href="client/pages/flappy-bird-page/flappy-bird.css">
+</head>
+<body>
+    <button class="sound-toggle" id="soundToggle">🔊</button>
+
+    <div class="game-container">
+        <div class="header">
+            <a href="/main.html" class="back-link">← Quay về trang chủ</a>
+            <h1>🐦 FLAPPY BIRD</h1>
+            <p class="subtitle">Bay qua các ống và giành điểm cao!</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-label">Điểm số</div>
+                <div class="stat-value" id="score">0</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-label">Kỷ lục</div>
+                <div class="stat-value" id="highScore">0</div>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="startBtn">Bắt đầu chơi</button>
+            <button class="btn" id="pauseBtn" style="display: none;">Tạm dừng</button>
+            <button class="btn" id="resetBtn">Reset kỷ lục</button>
+        </div>
+
+        <div class="instructions">
+            <h3>Hướng dẫn chơi</h3>
+            <ul>
+                <li>Nhấn <strong>SPACE</strong>, <strong>CLICK</strong> hoặc <strong>TAP</strong> để bay lên</li>
+                <li>Tránh đâm vào ống và mặt đất</li>
+                <li>Bay qua mỗi cặp ống được +1 điểm</li>
+                <li>Nhấn <strong>P</strong> để tạm dừng</li>
+                <li>Game kết thúc khi chạm vật cản</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>GAME OVER!</h2>
+            <p>Điểm của bạn: <strong id="finalScore">0</strong></p>
+            <p id="newRecordText" style="display: none;">🏆 KỶ LỤC MỚI! 🏆</p>
+            
+            <div class="modal-buttons">
+                <button class="btn btn-primary" id="playAgainBtn">Chơi lại</button>
+                <button class="btn" id="quitBtn">Dừng lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="client/assets/js/flappy-bird.js"></script>
+</body>
+</html>
