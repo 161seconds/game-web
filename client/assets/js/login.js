@@ -36,11 +36,11 @@ function handleLogin(event) {
             localStorage.setItem('rememberedUser', JSON.stringify(userData));
         }
 
-        alert(`Đăng nhập thành công! 🎉\nChào mừng ${user.fullname}!`);
+        alert(`Đăng nhập thành công! \nChào mừng ${user.fullname}!`);
 
         window.location.href = '/main.html';
     } else {
-        alert('❌ Đăng nhập thất bại!\n\nEmail/Username hoặc mật khẩu không đúng.\nVui lòng thử lại.');
+        alert('Đăng nhập thất bại!\n\nEmail/Username hoặc mật khẩu không đúng.\nVui lòng thử lại.');
 
         document.getElementById('password').value = '';
         document.getElementById('password').focus();
