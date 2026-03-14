@@ -74,7 +74,7 @@ function handleRegister(event) {
 
     alert('Đăng ký thành công! \nChào mừng bạn đến với Game Hub!');
 
-    window.location.href = './client/pages/login-page/login.html';
+    window.location.href = '/client/pages/login-page/login.html';
 }
 
 const inputs = document.querySelectorAll('input, select');

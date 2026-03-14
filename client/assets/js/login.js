@@ -13,8 +13,16 @@ function handleLogin(event) {
     const remember = document.getElementById('remember').checked;
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
-    users.push(formData);
-    localStorage.setItem('users', JSON.stringify(users));
+    localStorage.setItem('users', JSON.stringify([
+        {
+            username: "admin",
+            email: "admin@gmail.com",
+            password: "123456",
+            fullname: "Admin Test"
+        }
+    ]));
+    // users.push(formData);
+    // localStorage.setItem('users', JSON.stringify(users));
 
     const user = users.find(u =>
         (u.email === emailOrUsername || u.username === emailOrUsername) &&
